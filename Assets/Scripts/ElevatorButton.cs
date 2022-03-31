@@ -9,11 +9,13 @@ public class ElevatorButton : MonoBehaviour
     void Start()
     {
         buttonAnimator = GetComponent<Animator>();
+        Debug.Log("Got animator");
         
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Pushed");
         buttonAnimator.SetTrigger("ButtonPushed");
     }
 }
