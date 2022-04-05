@@ -1,21 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
-public class ElevatorButton : MonoBehaviour
+public class ElevatorButton : XRBaseInteractable
 {
     private Animator buttonAnimator;
     // Start is called before the first frame update
     void Start()
     {
-        buttonAnimator = GetComponent<Animator>();
-        Debug.Log("Got animator");
-        
+        buttonAnimator = GetComponent<Animator>();        
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
-        Debug.Log("Pushed");
+        base.OnSelectEntered(args);
         buttonAnimator.SetTrigger("ButtonPushed");
+
+        if (gameObject.name == "ElevatorButton") LoadLevel.levelName = "Amsterdam";
+        if (gameObject.name == "ElevatorButton.001") LoadLevel.levelName = "Forest";
+        if (gameObject.name == "ElevatorButton.002") LoadLevel.levelName = "Grief";
     }
 }
