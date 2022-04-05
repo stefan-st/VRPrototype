@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR;
-using Unity.XR.CoreUtils;
-using UnityEngine.XR.Interaction.Toolkit;
 
 public class LoadLevel : MonoBehaviour
 {
@@ -12,21 +10,18 @@ public class LoadLevel : MonoBehaviour
     [ContextMenuItem("Load Level", nameof(EditorLoadLevel))]
     [ContextMenuItem("Load Level 2", nameof(EditorLoadLevel))]
     public static string levelName = "HospitalHallway";
-    public XRNode inputSource;
     private bool isPressed = false;
 
-    private string loadedLevelName = string.Empty;
+    private string loadedLevelName = "HospitalHallway";
 
 
     private void Update()
     {
-        // change this to by using the XR controller
-        InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
-        device.TryGetFeatureValue(CommonUsages.primaryButton, out isPressed);
+
     }
 
     [ContextMenu("Load Level - Context Menu")]
-    void EditorLoadLevel()
+    public void EditorLoadLevel()
     {
         StartCoroutine(LoadLevelAsync());
     }
