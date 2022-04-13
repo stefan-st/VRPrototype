@@ -506,6 +506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bikePrefab: {fileID: 4712306676753194197, guid: 92bfe8c7d6020714d98b0a7a436a5605, type: 3}
+  bikesToSpawn: 10
 --- !u!4 &147418048
 Transform:
   m_ObjectHideFlags: 0
@@ -4050,6 +4051,26 @@ PrefabInstance:
     - target: {fileID: 5468758739924239971, guid: 775b42d6c11feaf49abd8d3ff0e33a87, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468758739929837475, guid: 775b42d6c11feaf49abd8d3ff0e33a87, type: 3}
+      propertyPath: m_IsWalking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468758739929837475, guid: 775b42d6c11feaf49abd8d3ff0e33a87, type: 3}
+      propertyPath: m_UseHeadBob
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468758739929837475, guid: 775b42d6c11feaf49abd8d3ff0e33a87, type: 3}
+      propertyPath: m_standingHeight
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468758739929837475, guid: 775b42d6c11feaf49abd8d3ff0e33a87, type: 3}
+      propertyPath: m_crouchingHeight
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468758739929837475, guid: 775b42d6c11feaf49abd8d3ff0e33a87, type: 3}
+      propertyPath: m_CrouchMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 775b42d6c11feaf49abd8d3ff0e33a87, type: 3}
