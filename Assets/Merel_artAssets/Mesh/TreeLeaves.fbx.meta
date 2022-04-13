@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 5b489923e2590b840b54f427384d0ffe
+guid: aa7a1533a00d4ee4db79637170ec85c5
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MATT_Bark
+    second: {fileID: 2100010, guid: 47616bd0cda748d4cbedcfc908506b9d, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MATT_Leaf
+    second: {fileID: 2100000, guid: cb17c02784c7c7144b75ab832dec0618, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
