@@ -13,12 +13,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
     public class FirstPersonController : MonoBehaviour
     {
         [SerializeField] private bool m_IsWalking;
+        [SerializeField] private bool m_IsCrouching;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
+        [SerializeField] private float m_standingHeight = 2f;
+        [SerializeField] private float m_crouchingHeight = 1.25f;
         [SerializeField] private float m_JumpSpeed;
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] private float m_GravityMultiplier;
+        [SerializeField] private float m_CrouchMultiplier;
         [SerializeField] private MouseLook m_MouseLook;
         [SerializeField] private bool m_UseFovKick;
         [SerializeField] private FOVKick m_FovKick = new FOVKick();
@@ -57,6 +61,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            m_standingHeight = m_CharacterController.height;
         }
 
 
@@ -215,9 +220,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
             m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+            m_IsCrouching = Input.GetKey(KeyCode.LeftControl);
 #endif
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
+            if (m_IsCrouching)
+            {
+                m_CharacterController.height = m_crouchingHeight;
+                speed *= m_CrouchMultiplier;
+            } else
+            {
+                m_CharacterController.height = m_standingHeight;
+            }
             m_Input = new Vector2(horizontal, vertical);
 
             // normalize input if it exceeds 1 in combined length:
