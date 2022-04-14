@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/CozyFirePlace.unity
+    guid: 9fc3ca29a1013534e8a7ca91a121d292
+  - enabled: 1
+    path: Assets/Scenes/Amsterdam.unity
+    guid: ced1e405bd7bc964d9206dae7e90ddcb
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 261604721678fd3408999373eeb1de18
+  - enabled: 1
+    path: Assets/Scenes/SnowyMountains.unity
+    guid: 491f2352b74955d4387104e4f423fd06
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 49d9ed4bd8164044eaf5c6b41ff0f6d3, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 1390218c1afedaf4495cb1452ab79325, type: 2}
