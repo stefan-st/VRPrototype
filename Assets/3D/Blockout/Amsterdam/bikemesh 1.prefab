@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 3791227756576422646}
   - component: {fileID: 5771766110654806070}
   - component: {fileID: 810383755109204125}
+  - component: {fileID: 1687139339014954388}
   m_Layer: 0
   m_Name: Cylinder.001
   m_TagString: Untagged
@@ -243,6 +244,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!146 &1687139339014954388
+WheelCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2250006683184433428}
+  m_Center: {x: 0, y: -0.007, z: 0.006}
+  m_Radius: 0.005
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.003
+  m_ForceAppPointDistance: 0
+  m_Mass: 20
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
+  m_Enabled: 1
 --- !u!1 &5444885105750150961
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,6 +285,7 @@ GameObject:
   - component: {fileID: 5122492480315113355}
   - component: {fileID: 1631530017971983580}
   - component: {fileID: 368136100715050204}
+  - component: {fileID: 4336994714369403904}
   m_Layer: 0
   m_Name: Cylinder.002
   m_TagString: Untagged
@@ -324,6 +356,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!146 &4336994714369403904
+WheelCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5444885105750150961}
+  m_Center: {x: 0, y: 0.008, z: 0.006}
+  m_Radius: 0.005
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.003
+  m_ForceAppPointDistance: 0
+  m_Mass: 0.1
+  m_WheelDampingRate: 0.00025
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
+  m_Enabled: 1
 --- !u!1 &6604466609223493159
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +480,6 @@ GameObject:
   - component: {fileID: 1033855414316215209}
   - component: {fileID: 1890222355334862866}
   - component: {fileID: 7340732337563882826}
-  - component: {fileID: 7340732337563882871}
   m_Layer: 0
   m_Name: bikemesh 1
   m_TagString: Untagged
@@ -493,20 +554,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &7340732337563882871
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7340732337563882870}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5072169
-  m_Height: 2.544571
-  m_Direction: 2
-  m_Center: {x: -0.0707643, y: 0.4763252, z: -0.033434868}
 --- !u!1 &8488326935340074070
 GameObject:
   m_ObjectHideFlags: 0
