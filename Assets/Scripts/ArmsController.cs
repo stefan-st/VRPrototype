@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ArmsController : MonoBehaviour
 {
@@ -32,6 +33,14 @@ public class ArmsController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             armsAnimator.SetTrigger("punchRight");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Finish"))
+        {
+            SceneManager.LoadScene("Scene/CozyFirePlace", LoadSceneMode.Single);
         }
     }
 }
